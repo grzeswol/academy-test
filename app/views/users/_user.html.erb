@@ -1,2 +1,3 @@
 <td><%= link_to user.name, user %></td>
 <td><%= link_to user.email, user %></td>
+<td><%= link_to user.date_of_birth.strftime("Born %d-%m-%Y (#{pluralize(user.years_from_now, "Year")})"), user if user.date_of_birth %></td>
