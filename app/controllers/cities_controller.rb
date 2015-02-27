@@ -1,10 +1,11 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   respond_to :html
 
   def index
-    @cities = City.paginate(:page => params[:page], :per_page => 1)
+    @cities = City.paginate(:page => params[:page], :per_page => 4)
     respond_with(@cities)
   end
 
