@@ -2,3 +2,4 @@
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
 <p>Date of birth: <%= @user.date_of_birth.strftime("%d-%m-%Y") if @user.date_of_birth %></p>
+<p>City: <%= City.find_by(id: @user.city_id).name if @user.city_id %></p>
