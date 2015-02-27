@@ -9,6 +9,9 @@
               <%= render city %>
             </tr>
           <% end %>
+	  <div class="flickr_pagination">
+	    <%= will_paginate @cities %>
+	  </div>
         </tbody>
       </table>
     </div>
